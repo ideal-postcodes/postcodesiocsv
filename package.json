@@ -4,7 +4,7 @@
   "description": "Quick script to parse CSV of postcodes and output associated information",
   "main": "index.js",
   "bin": {
-    "postcodesiocsv": "index.js"
+    "postcodesiocsv": "./bin/postcodesiocsv"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
