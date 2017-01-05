@@ -1,0 +1,22 @@
+{
+  "name": "postcodesiocsv",
+  "version": "1.0.0",
+  "description": "Quick script to parse CSV of postcodes and output associated information",
+  "main": "index.js",
+  "bin": {
+    "postcodesiocsv": "node index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ideal Postcodes (support@ideal-postcodes.co.uk)",
+  "license": "MIT",
+  "dependencies": {
+    "async": "~2.1.4",
+    "csv": "~1.1.0",
+    "minimist": "~1.2.0",
+    "postcodesio-client": "~0.1.2",
+    "prompt-sync": "~4.1.4",
+    "request": "~2.79.0"
+  }
+}
