@@ -16,7 +16,6 @@ const onError = error => {
 	process.exit(1);
 };
 
-
 // Detect input file
 const inputFile = argv.i;
 if (!inputFile) {
