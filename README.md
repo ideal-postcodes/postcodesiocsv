@@ -22,6 +22,12 @@ This will return postcode,longitude,latitude by default. Specify your own output
 postcodesiocsv -i <INPUT_FILE.csv> -o <OUTPUT_FILE.csv> -s postcode,country,northings,eastings
 ```
 
+You can specify the column index for where your postcodes will be using the `-c` flag. Note, this is zero indexed, so `-c 1` represents the second column
+
+```
+postcodesiocsv -i <INPUT_FILE.csv> -o <OUTPUT_FILE.csv> -c 2
+```
+
 ## Example
 
 input.csv
@@ -48,5 +54,8 @@ PL17 7BW,-4.31379882001634,50.5040671479147
 
 ## Changelog
 
+1.0.3 Include flag to set postcode column
+
 1.0.2 Initiate script from ./bin/
+
 1.0.0 Initial commit

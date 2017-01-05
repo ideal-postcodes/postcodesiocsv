@@ -51,6 +51,21 @@ if (SCHEMA) {
 	outputSchema = SCHEMA.split(",");
 }
 
+// Detect postcode index
+let postcodeColumnIndex = 0;
+const COL_INDEX = argv.c;
+if (COL_INDEX) {
+	console.log(`Custom CSV postcode column detected: ${COL_INDEX}`);
+	postcodeColumnIndex = parseInt(COL_INDEX, 10);
+}
+if (isNaN(postcodeColumnIndex)) {
+	let message = `
+		Invalid postcode column index specified
+	`;
+	onError(new Error(message));
+}
+
+
 // Get confirmation from user to proceed
 console.log(`\nYou are about to initiate a script to lookup postcodes at: \n${fullInputPath}`);
 console.log(`The output will be written as CSV to: \n${fullOutputPath}`);
@@ -66,7 +81,7 @@ const data = [];
 
 fs.createReadStream(inputFile, { encoding: "utf8" })
 .pipe(csv.parse({ delimiter: "," }))
-.on("data", row => data.push(row[0]))
+.on("data", row => data.push(row[postcodeColumnIndex]))
 .on("error", onError)
 .on("end", () => {
 	console.log(`Loaded ${data.length} postcodes`);
@@ -80,7 +95,7 @@ fs.createReadStream(inputFile, { encoding: "utf8" })
 		});
 	};
 
-	async.map(data, (postcode, callback) => {
+	async.mapLimit(data, 5, (postcode, callback) => {
 		client.lookup(postcode, (error, result) => {
 			count += 1;
 			if (count > 0 && count % 10000 === 0) {
