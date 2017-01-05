@@ -48,5 +48,5 @@ PL17 7BW,-4.31379882001634,50.5040671479147
 
 ## Changelog
 
-1.0.1 Initiate script from ./bin/
+1.0.2 Initiate script from ./bin/
 1.0.0 Initial commit
