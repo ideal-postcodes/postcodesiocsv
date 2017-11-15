@@ -1,6 +1,6 @@
 {
   "name": "postcodesiocsv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Quick script to parse CSV of postcodes and output associated information",
   "main": "index.js",
   "bin": {
