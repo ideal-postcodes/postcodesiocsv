@@ -17,6 +17,6 @@
     "minimist": "~1.2.0",
     "postcodesio-client": "~0.2.0",
     "prompt-sync": "~4.1.5",
-    "request": "~2.84.0"
+    "request": "~2.88.0"
   }
 }
