@@ -12,7 +12,7 @@
   "author": "Ideal Postcodes (support@ideal-postcodes.co.uk)",
   "license": "MIT",
   "dependencies": {
-    "async": "~2.6.0",
+    "async": "~3.0.1",
     "csv": "~5.1.1",
     "minimist": "~1.2.0",
     "postcodesio-client": "~0.3.4",
