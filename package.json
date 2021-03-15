@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "~3.2.0",
-    "csv": "~5.3.0",
+    "csv": "~5.4.0",
     "minimist": "~1.2.0",
     "postcodesio-client": "~0.3.4",
     "prompt-sync": "~4.2.0",
